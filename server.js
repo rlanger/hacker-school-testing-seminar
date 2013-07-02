@@ -16,6 +16,11 @@
         res.writeHead(200, { 'Content-Type': 'application/javascript' });
         res.end(data);
       });
+    } else if (req.url === "/canvas-renderer.js") {
+      fs.readFile('canvas-renderer.js', 'utf8', function (err, data) {
+        res.writeHead(200, { 'Content-Type': 'application/javascript' });
+        res.end(data);
+      });
     } else if (req.url === "/time.json") {
       res.writeHead(200, { 'Content-Type': 'application/json' });
 
